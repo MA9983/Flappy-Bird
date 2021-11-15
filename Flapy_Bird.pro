@@ -1,6 +1,10 @@
+
+
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+QT += multimedia
 
 CONFIG += c++11
 
@@ -16,15 +20,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    birditem.cpp \
+    gameoverscreen.cpp \
     main.cpp \
+    pillaritem.cpp \
     scene.cpp \
+    startscreen.cpp \
     widget.cpp
 
 HEADERS += \
+    birditem.h \
+    gameoverscreen.h \
+    pillaritem.h \
     scene.h \
+    startscreen.h \
     widget.h
 
 FORMS += \
+    gameoverscreen.ui \
+    startscreen.ui \
     widget.ui
 
 TRANSLATIONS += \
@@ -37,3 +51,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     Resource.qrc
+
